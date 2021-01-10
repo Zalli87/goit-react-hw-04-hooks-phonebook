@@ -1,52 +1,59 @@
-import React, { Component } from 'react';
+// import { useState } from 'react';
 
-class ContactForm extends Component {
-    state = {
-        name: '',
-        number: '',
-    };
+// function ContactForm() {
 
-    handleChange = event => {
-        const { name, value } = event.currentTarget;
-        this.setState({ [name]: value });
-    };
+//     const [name, setName] = useState('');
+//     const [number, setNumber] = useState('');
 
-    reset = () => {
-        this.setState({ name: '', number: '' });
-    };
+//   const handleChange = event => {
+//         const { name, value } = event.currentTarget;
+//         switch (name) {
+//             case 'name':
+//                 setName(value);
+//                 break;
+//             case 'number':
+//                 setNumber(value);
+//                 break;
+//             default:
+//                 return;
+//       };
+//     };
 
-    handleSubmit = event => {
-        event.preventDefault();
-        this.props.onSubmit(this.state);
-        this.reset();
-    };
+//     reset = () => {
+//         setName('');
+//         setNumber('');
+//     };
 
-    render() {
-        const { name, number } = this.state;
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    <p>Name:</p>
-                    <input
-                        type="text"
-                        value={name}
-                        name="name"
-                        onChange={this.handleChange}
-                    />
-                </label>
-                <label>
-                    <p>Number:</p>
-                    <input
-                        type="text"
-                        value={number}
-                        name="number"
-                        onChange={this.handleChange}
-                    />
-                </label>
-                <button type="submit">Add contact</button>
-            </form>
-        );
-    }
-}
+//   const  handleSubmit = event => {
+//         event.preventDefault();
+//         onSubmit(name, number);
+//         reset();
+//     };
 
-export default ContactForm;
+//           return (
+//             <form onSubmit={handleSubmit}>
+//                 <label>
+//                     <p>Name:</p>
+//                     <input
+//                         type="text"
+//                         value={name}
+//                         name="name"
+//                         onChange={handleChange}
+//                     />
+//                 </label>
+//                 <label>
+//                     <p>Number:</p>
+//                     <input
+//                         type="text"
+//                         value={number}
+//                         name="number"
+//                         onChange={handleChange}
+//                     />
+//                 </label>
+//                 <button type="submit">Add contact</button>
+//             </form>
+//         );
+
+// }
+
+// export default ContactForm;
